@@ -10,34 +10,26 @@ The objective of this system is to collect, store, process, analyze, and visuali
 
 ## Project Structure
 
-Customer-Lifetime-Value-Analysis-System
-│
-├── data_collection
-│ └── kinesis_data_streams.py
-│
-├── data_storage
-│ ├── s3_storage.py
-│ └── aurora_db.py
-│
-├── data_processing
-│ ├── lambda_processing.py
-│ └── emr_processing.py
-│
-├── data_analytics
-│ └── redshift_analytics.py
-│
-├── visualization
-│ └── quicksight_visualization.py
-│
-├── infrastructure
-│ ├── multi_az_setup.py
-│ └── auto_scaling_setup.py
-│
-└── disaster_recovery
-├── s3_replication.py
-├── rds_multiaz.py
-└── backup_setup.py
-
+- src: Contains the source code for different components.
+   - data_collection: Scripts for collecting real-time data from mobile apps using Amazon Kinesis Data Streams.
+   - kinesis_data_streams.py: Script to set up and manage data streams for real-time data collection.
+   - data_storage: Scripts for storing raw and structured data.
+      - s3_storage.py: Script for storing raw data in Amazon S3.
+      - aurora_db.py: Script for storing structured relational data in Amazon Aurora (MySQL compatible).
+   - data_processing: Scripts for processing data using AWS Lambda and Amazon EMR.
+      - lambda_processing.py: AWS Lambda function script for real-time data processing.
+      - emr_processing.py: Script for processing large-scale data using Amazon EMR.
+   - data_analytics: Scripts for performing complex queries and analytics.
+      - redshift_analytics.py: Script for running analytics and complex queries on large datasets using Amazon Redshift.
+   - visualization: Scripts for visualizing data.
+      - quicksight_visualization.py: Script for creating visualizations and dashboards using Amazon QuickSight.
+   - infrastructure: Scripts to set up AWS infrastructure components to ensure high availability, scalability, and fault tolerance.
+      - multi_az_setup.py: Script to configure Multi-AZ deployments for high availability.
+      - auto_scaling_setup.py: Script to set up Amazon Auto Scaling for automatic scaling of EC2 instances.
+   - disaster_recovery: Scripts for implementing disaster recovery mechanisms.
+      - s3_replication.py: Script to set up S3 cross-region replication for fault tolerance.
+      - rds_multiaz.py: Script to configure RDS Multi-AZ deployments for fault-tolerant databases.
+      - backup_setup.py: Script to set up AWS Backup for automated backups and disaster recovery.
 
 ## Components and AWS Services
 
