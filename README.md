@@ -70,39 +70,47 @@ The objective of this system is to collect, store, process, analyze, and visuali
    ```sh
    aws configure
 
-Install Dependencies:
+2. **Install Dependencies**:
 Install the necessary Python packages:
+ ```sh
 pip install boto3 pymysql
 
-Run Data Collection:
+3. **Run Data Collection**:
 Start collecting data from mobile apps:
+ ```sh
 python data_collection/kinesis_data_streams.py
 
-Store Data:
+4. **Store Data**:
 Store raw data in S3 and structured data in Aurora:
+ ```sh
 python data_storage/s3_storage.py
 python data_storage/aurora_db.py
 
-Process Data:
+5. **Process Data**:
+ ```sh
 Process data using AWS Lambda and Amazon EMR:
 python data_processing/lambda_processing.py
 python data_processing/emr_processing.py
 
-Analyze Data:
+6. **Analyze Data**:
+ ```sh
 Perform complex queries and analytics using Amazon Redshift:
 python data_analytics/redshift_analytics.py
 
-Visualize Data:
+7. **Visualize Data**:
 Visualize LTV metrics and trends using Amazon QuickSight:
+ ```sh
 python visualization/quicksight_visualization.py
 
-Set up High Availability:
+8. **Set up High Availability**:
 Ensure high availability for databases and processing services:
+ ```sh
 python infrastructure/multi_az_setup.py
 python infrastructure/auto_scaling_setup.py
 
-Set up Disaster Recovery:
+9. **Set up Disaster Recovery**:
 Implement S3 cross-region replication and RDS Multi-AZ deployments:
+ ```sh
 python disaster_recovery/s3_replication.py
 python disaster_recovery/rds_multiaz.py
 python disaster_recovery/backup_setup.py
