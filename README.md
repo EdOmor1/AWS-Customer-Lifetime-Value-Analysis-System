@@ -1,5 +1,3 @@
-# Customer-Lifetime-Value-Analysis-System
-
 # Customer Lifetime Value (LTV) Analysis System
 
 This project aims to build a system to track and analyze the lifetime value (LTV) of customers from mobile app campaigns across different regions.
